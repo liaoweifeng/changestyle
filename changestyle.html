@@ -1,0 +1,54 @@
+<html>
+
+<style>
+    .text {
+        align-content: center;
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 40px;
+    }
+</style>
+
+<body>
+    <span class="text">这是一个可以改变的字体</span>
+    <div class="colorbuttom">
+        <button id="Red">Red</button>
+        <button id="Green">Green</button>
+        <button id="Blue">Blue</button>
+    </div>
+    <div class="fontsize">
+        <button id="bigger">字体变大</button>
+        <button id="smaller">字体变小</button>
+    </div>
+    <div class="back">
+        <button id="back">restore</button>
+    </div>
+</body>
+<script>
+    //color
+    let Red = document.getElementById("Red")
+    let Green = document.getElementById("Green")
+    let Blue = document.getElementById("Blue")
+    Red.addEventListener("click", function () { document.querySelector(".text").style.color = 'red'; }, false)
+    Green.addEventListener("click", function () { document.querySelector(".text").style.color = 'green'; }, false)
+    Blue.addEventListener("click", function () { document.querySelector(".text").style.color = 'blue'; }, false)
+
+    //fontsize
+    var num = 40
+    let bigger = document.getElementById("bigger")
+    let smaller = document.getElementById("smaller")
+    bigger.addEventListener("click", function () { num += 2; document.querySelector(".text").style.fontSize = num + 'px'; })
+    smaller.addEventListener("click", function () { num -= 2; document.querySelector(".text").style.fontSize = num + 'px'; })
+
+    //restore
+    let back = document.getElementById("back")
+    back.addEventListener("click", function back() { document.querySelector(".text").style.fontSize = '40px';})
+    back.addEventListener("click", function back() { document.querySelector(".text").style.color = 'black';})
+
+
+
+</script>
+
+</html>
